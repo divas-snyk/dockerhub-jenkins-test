@@ -7,7 +7,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'docker build -t divassnyk/hello-py:latest .'
-        sh 'docker build -t divassnyl/hello-py:slim -f Dockerfile-2 .'
+        sh 'docker build -t divassnyk/hello-py:slim -f Dockerfile-2 .'
       }
     }
     stage('Login') {
