@@ -23,7 +23,7 @@ pipeline {
     }
     stage('Snyk Import') {
       steps {
-        sh 'curl-api-call.sh'
+        sh './curl-api-call.sh'
       }
     }
   }
