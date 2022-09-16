@@ -7,6 +7,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'docker build -t divassnyk/hello-py:latest .'
+        sh 'docker build -t divassnyl/hello-py:slim -f Dockerfile-2 .'
       }
     }
     stage('Login') {
@@ -17,6 +18,7 @@ pipeline {
     stage('Push') {
       steps {
         sh 'docker push divassnyk/hello-py:latest'
+        sh 'docker push divassnyk/hello-py:slim'
       }
     }
   }
