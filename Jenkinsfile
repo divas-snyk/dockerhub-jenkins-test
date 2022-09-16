@@ -21,6 +21,11 @@ pipeline {
         sh 'docker push divassnyk/hello-py:slim'
       }
     }
+    stage('Snyk Import') {
+      steps {
+        sh 'curl-api-call.sh'
+      }
+    }
   }
   post {
     always {
